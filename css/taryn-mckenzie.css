@@ -1,12 +1,28 @@
-.main-article{
-    margin: 100px  200px;
+:root {
+    --darkGrey-color: #26242B;
+    --maroon-color: #482325;
+    --redTan-color: #D6BBA6;
+    --yellowTan-color: #E1DAC8;
+    --lighGrey-color: #EEEEEE;
+
+    /*font-family: 'Lato', sans-serif;*/
+    /*font-family: 'DM Serif Text', serif;*/
 }
 
+body{
+    background: var(--yellowTan-color);
+}
+
+.main-article{
+    margin: 100px  200px;
+    font-family: 'Lato', sans-serif;
+}
 
 /*---------NAVBAR---------*/
 .navbar a{
     text-decoration: none;
     padding: 0 20px;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar ul{
@@ -24,6 +40,8 @@
     padding: 0 50px;
     font-size: 4em;
     margin: 0 600px  20px 0 ;
+    color: var(--maroon-color);
+    font-family: 'DM Serif Text', serif;
 }
 
 #graphic-icon{
@@ -36,18 +54,20 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 80px;
+    grid-column-gap: 100px;
     grid-row-gap: 0px;
 
     text-align: justify;
-    padding: 50px;
+    padding: 0 50px;
+    /*text-indent: 50px;*/
+    line-height: 25px;
 }
 
 
 /*---------PROJECT CARDS---------*/
 
 #projects-section h2{
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 0 50px;
 }
 #project-cards{
@@ -66,7 +86,7 @@
 
 /*---------CODEPEN CARDS---------*/
 #codepen-section h2{
-    margin-top: 100px;
+    margin-top: 150px;
     padding: 0 50px;
 }
 #codepen-cards{

@@ -27,7 +27,7 @@ const projects = [ // An array of projects
     {id: 4, title: 'Capstone', img: '<img src="img/Doge.jpg" class="image" alt="">'},
     {id: 5, title: 'Tamagotchi RPG', img: '<img src="img/Doge.jpg" class="image" alt="">'},
     {id: 6, title: 'Fortune Teller', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 7, title: 'Calculator', img: '<img src="img/Doge.jpg" class="image" alt="">'},
+    {id: 7, title: 'Weather Map API', img: '<img src="img/Doge.jpg" class="image" alt="">'},
     {id: 8, title: 'Konami Code', img: '<img src="img/Doge.jpg" class="image" alt="">'},
 ];
 
