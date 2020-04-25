@@ -21,14 +21,14 @@ function renderProjectCards(projects) { //loops through projects, add each proje
 
 
 const projects = [ // An array of projects
-    {id: 1, title: 'Coffee Project', img: '<img src="img/Doge.jpg" class="image"  alt="">'},
-    {id: 2, title: 'Movies Application', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 3, title: 'AdLister', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 4, title: 'Capstone', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 5, title: 'Tamagotchi RPG', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 6, title: 'Fortune Teller', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 7, title: 'Weather Map API', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 8, title: 'Konami Code', img: '<img src="img/Doge.jpg" class="image" alt="">'},
+    {id: 1, title: 'Coffee Project', img: '<img src="https://placeholder.pics/svg/250x200" class="image"  alt="">'},
+    {id: 2, title: 'Movies Application', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 3, title: 'AdLister', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 4, title: 'Capstone', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 5, title: 'Tamagotchi RPG', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 6, title: 'Fortune Teller', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 7, title: 'Weather Map API', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 8, title: 'Konami Code', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
 ];
 
 
@@ -52,10 +52,10 @@ function renderCodepenCards(projects) { //loops through projects, add each proje
 
 
 const codepenProjects = [ // An array of codepen projects
-    {id: 1, title: 'Login Form', img: '<img src="img/Doge.jpg" class="image"  alt="">'},
-    {id: 2, title: 'Search Bar', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 3, title: 'Calculator', img: '<img src="img/Doge.jpg" class="image" alt="">'},
-    {id: 4, title: 'Card', img: '<img src="img/Doge.jpg" class="image" alt="">'},
+    {id: 1, title: 'Login Form', img: '<img src="https://placeholder.pics/svg/250x200" class="image"  alt="">'},
+    {id: 2, title: 'Search Bar', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 3, title: 'Calculator', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {id: 4, title: 'Card', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
 ];
 
 const portfolioProjectsSection = document.querySelector('#project-cards'); // get the id for the card div
