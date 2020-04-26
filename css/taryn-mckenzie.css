@@ -17,6 +17,7 @@ body{
     width: 80%;
     margin: 10% 10%;
     font-family: 'Lato', sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 /*--------- NAVBAR(S)---------*/
@@ -26,6 +27,7 @@ body{
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     color: var(--maroon-color);
+    text-rendering: optimizeLegibility;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
@@ -68,6 +70,7 @@ nav.footer-nav ul li{
     font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     color: var(--maroon-color);
+    text-rendering: optimizeLegibility;
     font-family: 'DM Serif Text', serif;
 }
 #this-paragraph {
@@ -82,6 +85,7 @@ nav.footer-nav ul li{
 
     color: var(--maroon-color);
     letter-spacing: .10px;
+    text-rendering: optimizeLegibility;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
@@ -127,46 +131,76 @@ nav.footer-nav ul li{
 
 /*---------PROJECT CARDS---------*/
 #projects-section h2{
-    margin-top: 150px;
-    padding: 0 20px;
+    width: 85%;
+    margin: 5% 0 10% 5%;
+
     color: var(--maroon-color);
-    font-size: 2em;
+    font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
 }
 #project-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    column-count: 3;
+    column-gap: 1em;
+    width: 90%;
+    margin: 5% 0 10% 10%;
 }
 
 .card-title{
-    font-size: 1.05em;
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    text-rendering: optimizeLegibility;
     font-weight: bold;
     padding: 10px 0;
     color: var(--maroon-color);
 }
 
 .card-body{
-    padding: 20px;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
 }
+
+.card-img {
+    width: 100%;
+    height: 500px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card-img:hover .img-content-hover {
+     display: block;
+ }
+
 .card-img img{
-    height: 240px;
-    width: auto;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
+
+.card-img img:hover {
+     transform: scale(1.05);
+ }
+
+
 
 
 /*---------CODEPEN CARDS---------*/
 #codepen-section h2{
-    margin-top: 150px;
-    padding: 0 20px;
+    width: 85%;
+    margin: 5% 0 10% 5%;
+
     color: var(--maroon-color);
-    font-size: 2em;
+    font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 }
 #codepen-cards{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    column-count: 3;
+    column-gap: 1em;
+
+    width: 90%;
+    margin: 5% 0 10% 10%;
 }
 
 /*---------------------------------------------------------*/
@@ -187,6 +221,19 @@ nav.footer-nav ul li{
 
     .experiences, .education {
         width: 75%;
+        margin: 5% 0 10% 10%;
+    }
+
+    #project-cards{
+        column-count: 1;
+        column-gap: 1em;
+        width: 90%;
+        margin: 5% 0 10% 10%;
+    }
+    #codepen-cards{
+        column-count: 1;
+        column-gap: 1em;
+        width: 90%;
         margin: 5% 0 10% 10%;
     }
 }

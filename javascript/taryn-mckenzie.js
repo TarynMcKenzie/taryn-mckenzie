@@ -21,14 +21,48 @@ function renderProjectCards(projects) { //loops through projects, add each proje
 
 
 const projects = [ // An array of projects
-    {id: 1, title: 'Coffee Project', img: '<img src="https://placeholder.pics/svg/250x200" class="image"  alt="">'},
-    {id: 2, title: 'Movies Application', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 3, title: 'AdLister', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 4, title: 'Capstone', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 5, title: 'Tamagotchi RPG', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 6, title: 'Fortune Teller', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 7, title: 'Weather Map API', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 8, title: 'Konami Code', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {
+        id: 1,
+        title: 'Coffee Project',
+        img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image"  alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 2,
+        title: 'Movies Application',
+        img: '<img src="img/brooke-lark-W1B2LpQOBxA-unsplash.jpg" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 3,
+        title: 'AdLister',
+        img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 4,
+        title: 'Capstone',
+        img: '<img src="img/tyler-lastovich-e31ANd1PXUw-unsplash.jpg" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 5,
+        title: 'Tamagotchi RPG',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 6,
+        title: 'Fortune Teller',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
+    {
+        id: 7,
+        title: 'Weather Map API',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">',
+        desc: 'This is the project description.'
+    },
 ];
 
 
@@ -53,10 +87,27 @@ function renderCodepenCards(projects) { //loops through projects, add each proje
 
 
 const codepenProjects = [ // An array of codepen projects
-    {id: 1, title: 'Login Form', img: '<img src="img/codepen-form-login.png" class="image"  alt="Login form snapshot from Codepen">', url:'"https://codepen.io/tarynmckenzie/full/vYNxzjQ"'},
-    {id: 2, title: 'Search Bar', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 3, title: 'Calculator', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
-    {id: 4, title: 'Card', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
+    {
+        id: 1,
+        title: 'Login Form',
+        img: '<img src="img/codepen-form-login.png" class="image"  alt="Login form snapshot from Codepen">',
+        url:'"https://codepen.io/tarynmckenzie/full/vYNxzjQ"'
+    },
+    {
+        id: 2,
+        title: 'Search Bar',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'
+    },
+    {
+        id: 3,
+        title: 'Calculator',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'
+    },
+    {
+        id: 4,
+        title: 'Card',
+        img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'
+    },
 ];
 
 const portfolioProjectsSection = document.querySelector('#project-cards'); // get the id for the card div
