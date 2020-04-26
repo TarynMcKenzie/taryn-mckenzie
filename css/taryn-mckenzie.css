@@ -10,7 +10,7 @@
 }
 
 body{
-    background: var(--yellowTan-color);
+    background: var(--redTan-color);
 }
 
 .main-article{
@@ -18,32 +18,46 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-/*---------NAVBAR---------*/
-.navbar a{
+/*--------- NAVBAR(S)---------*/
+.main-nav a, .footer-nav a{
     text-decoration: none;
     padding: 0 20px;
     font-family: 'Lato', sans-serif;
     color: var(--maroon-color);
 }
-
-.navbar ul{
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
+.main-nav, .footer-nav{
+    display:-webkit-flex;
+    display:flex;
     list-style: none;
+    justify-content:flex-end;
+    padding: 50px 100px;
+}
+.left {
+    padding: 0;
+    margin-right:auto;
+}
 
-    padding: 20px 50px;
+nav.footer-nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav.footer-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.footer-nav ul li{
+    display: inline-block;
 }
 
 
 /*---------INTRO SECTION---------*/
 #real-fancy-header{
-    padding: 0 700px 0 20px ;
-    font-size: 4em;
+    padding: 0 300px 0 50px;
+    font-size: 6em;
     color: var(--maroon-color);
     font-family: 'DM Serif Text', serif;
 }
-
 #graphic-icon{
     padding: 20px;
     height: 50px;
@@ -61,7 +75,7 @@ body{
 
     color: var(--maroon-color);
     /*text-align: justify;*/
-    padding: 0 20px;
+    padding-left: 500px;
     line-height: 20px;
     letter-spacing: .15px;
 }
