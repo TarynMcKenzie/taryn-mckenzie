@@ -35,7 +35,8 @@ const projects = [ // An array of projects
 function codepenCards(project) { //put the coffees into a table
 
     let html = '<div class="card-body" id="project-body">'; // create the card body tags
-    html += '<div class="card-img">' + project.img + '</div>'; // get the project image
+    html += '<a target="_blank" href=' + project.url + '>';
+    html += '<div class="card-img">' + project.img + '</div></a>'; // get the project image
     html += '<div class="card-title" >' + project.title + '</div>'; // get project title
     html += '</div>'; // end table row
 
@@ -52,7 +53,7 @@ function renderCodepenCards(projects) { //loops through projects, add each proje
 
 
 const codepenProjects = [ // An array of codepen projects
-    {id: 1, title: 'Login Form', img: '<img src="https://placeholder.pics/svg/250x200" class="image"  alt="">'},
+    {id: 1, title: 'Login Form', img: '<img src="img/codepen-form-login.png" class="image"  alt="Login form snapshot from Codepen">', url:'"https://codepen.io/tarynmckenzie/full/vYNxzjQ"'},
     {id: 2, title: 'Search Bar', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
     {id: 3, title: 'Calculator', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
     {id: 4, title: 'Card', img: '<img src="https://placeholder.pics/svg/250x200" class="image" alt="">'},
