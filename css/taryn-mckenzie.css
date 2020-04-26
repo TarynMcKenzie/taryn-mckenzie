@@ -14,14 +14,16 @@ body{
 }
 
 .main-article{
-    margin: 100px  200px;
+    width: 80%;
+    margin: 10% 10%;
     font-family: 'Lato', sans-serif;
 }
 
 /*--------- NAVBAR(S)---------*/
 .main-nav a, .footer-nav a{
+    padding: 10px;
+
     text-decoration: none;
-    padding: 0 20px;
     font-family: 'Lato', sans-serif;
     color: var(--maroon-color);
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -31,23 +33,27 @@ body{
 .main-nav, .footer-nav{
     display:-webkit-flex;
     display:flex;
-    list-style: none;
     justify-content:flex-end;
-    padding: 50px 100px;
+    list-style: none;
+
+    width: 90%;
+    margin: 5% 5%;
+    padding: 0;
 }
 .left {
-    padding: 0;
     margin-right:auto;
 }
 
 nav.footer-nav{
+    width: 90%;
+    margin: 5% 5%;
+
     display: flex;
     justify-content: space-between;
 }
 nav.footer-nav ul{
-    margin: 100px 0 10px 0;
-    padding: 0;
     list-style: none;
+    padding: 0;
 }
 nav.footer-nav ul li{
     display: inline-block;
@@ -56,7 +62,9 @@ nav.footer-nav ul li{
 
 /*---------INTRO SECTION---------*/
 #real-fancy-header{
-    padding: 0 300px 0 100px;
+    width: 85%;
+    margin: 0 0;
+
     font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     color: var(--maroon-color);
@@ -69,9 +77,10 @@ nav.footer-nav ul li{
     grid-column-gap: 60px;
     grid-row-gap: 0px;
 
+    width: 75%;
+    margin: 5% 0 10% 28%;
 
     color: var(--maroon-color);
-    padding-left: 500px;
     letter-spacing: .10px;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
@@ -81,7 +90,8 @@ nav.footer-nav ul li{
 /*---------SECTION(S) HEADERS---------*/
 
 #job-experience-header, #education-header{
-    padding: 100px 300px 0 100px;
+    width: 85%;
+    margin: 0;
 
     font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
@@ -90,7 +100,8 @@ nav.footer-nav ul li{
     font-family: 'DM Serif Text', serif;
 }
 #military-header{
-    padding: 50px 300px 0 100px;
+    width: 85%;
+    margin: 0;
 
     font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
@@ -101,7 +112,8 @@ nav.footer-nav ul li{
 
 /*---------SECTION(S)---------*/
 .experiences, .education{
-    padding: 40px 350px 0 230px;
+    width: 55%;
+    margin: 5% 0 10% 10%;
 
     color: var(--maroon-color);
     line-height: 20px;
@@ -155,4 +167,26 @@ nav.footer-nav ul li{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+/*---------------------------------------------------------*/
+/*------when the browser window is 600px wide or less------*/
+/*---------------------------------------------------------*/
+@media only screen and (max-width: 768px)  {
+
+    #this-paragraph {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+
+        width: 75%;
+        margin: 5% 0 10% 28%;
+    }
+
+    .experiences, .education {
+        width: 75%;
+        margin: 5% 0 10% 10%;
+    }
 }
