@@ -10,7 +10,7 @@
 }
 
 body{
-    background: var(--redTan-color);
+    background: var(--yellowTan-color);
 }
 
 .main-article{
@@ -24,6 +24,9 @@ body{
     padding: 0 20px;
     font-family: 'Lato', sans-serif;
     color: var(--maroon-color);
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
 }
 .main-nav, .footer-nav{
     display:-webkit-flex;
@@ -53,18 +56,12 @@ nav.footer-nav ul li{
 
 /*---------INTRO SECTION---------*/
 #real-fancy-header{
-    padding: 0 300px 0 50px;
-    font-size: 6em;
+    padding: 0 300px 0 100px;
+    font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     color: var(--maroon-color);
     font-family: 'DM Serif Text', serif;
 }
-#graphic-icon{
-    padding: 20px;
-    height: 50px;
-    width: auto;
-    fill: var(--maroon-color);
-}
-
 #this-paragraph {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -75,21 +72,29 @@ nav.footer-nav ul li{
 
     color: var(--maroon-color);
     padding-left: 500px;
-    line-height: 20px;
-    letter-spacing: .15px;
+    letter-spacing: .10px;
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
 }
 
 /*---------SECTION(S) HEADERS---------*/
 
 #job-experience-header, #education-header{
-    padding: 100px 300px 0 50px;
-    font-size: 3em;
+    padding: 100px 300px 0 100px;
+
+    font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
     color: var(--maroon-color);
     font-family: 'DM Serif Text', serif;
 }
 #military-header{
-    padding: 50px 300px 0 50px;
-    font-size: 2em;
+    padding: 50px 300px 0 100px;
+
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
     color: var(--maroon-color);
     font-family: 'DM Serif Text', serif;
 }
@@ -101,6 +106,10 @@ nav.footer-nav ul li{
     line-height: 20px;
     letter-spacing: .15px;
     font-family: 'Lato', sans-serif;
+
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
 }
 
 /*---------PROJECT CARDS---------*/
