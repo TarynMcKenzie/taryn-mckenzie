@@ -182,8 +182,9 @@ nav.footer-nav ul li{
 .card-img img:hover {
      transform: scale(1.05);
  }
-
-
+.modal-hidden{
+    display: none;
+}
 
 
 /*---------CODEPEN CARDS---------*/
