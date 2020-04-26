@@ -74,12 +74,34 @@ nav.footer-nav ul li{
 
 
     color: var(--maroon-color);
-    /*text-align: justify;*/
     padding-left: 500px;
     line-height: 20px;
     letter-spacing: .15px;
 }
 
+/*---------SECTION(S) HEADERS---------*/
+
+#job-experience-header, #education-header{
+    padding: 100px 300px 0 50px;
+    font-size: 3em;
+    color: var(--maroon-color);
+    font-family: 'DM Serif Text', serif;
+}
+#military-header{
+    padding: 50px 300px 0 50px;
+    font-size: 2em;
+    color: var(--maroon-color);
+    font-family: 'DM Serif Text', serif;
+}
+/*---------SECTION(S)---------*/
+.experiences, .education{
+    padding: 40px 350px 0 200px;
+
+    color: var(--maroon-color);
+    line-height: 20px;
+    letter-spacing: .15px;
+    font-family: 'Lato', sans-serif;
+}
 
 /*---------PROJECT CARDS---------*/
 
