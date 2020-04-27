@@ -227,37 +227,22 @@ a.skill-card-link:hover::after {
 
 /*---------PROJECT CARDS---------*/
 #projects-section h2 {
-    width: 85%;
-    margin: 5% 0 0 5%;
+    width: 90%;
+    margin: 5% 0 5% 5%;
 
     color: var(--maroon-color);
-    font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-
+    font-family: 'DM Serif Text', serif;
 }
 
 #project-cards {
-    column-count: 3;
+    column-count: 4;
     column-gap: 1em;
+
     width: 90%;
-    margin: 0 0 0 10%;
+    margin: 0 15% 0 5%;
 }
-
-.card-title {
-    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
-    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-
-    font-weight: bold;
-    padding: 10px 0;
-    color: var(--maroon-color);
-}
-
-.card-body {
-    display: inline-block;
-    margin: 0 0 1em;
-    width: 100%;
-}
-
 .card-img {
     width: 100%;
     height: 500px;
@@ -282,28 +267,106 @@ a.skill-card-link:hover::after {
 
 }
 
-.modal-hidden {
-    display: none;
-}
-
-
 /*---------CODEPEN CARDS---------*/
 #codepen-section h2 {
-    width: 85%;
-    margin: 5% 0 10% 5%;
+    width: 90%;
+    margin: 15% 0 5% 5%;
 
     color: var(--maroon-color);
-    font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-family: 'DM Serif Text', serif;
 }
 
 #codepen-cards {
-    column-count: 3;
+    column-count: 4;
     column-gap: 1em;
 
     width: 90%;
-    margin: 5% 0 10% 10%;
+    margin: 0 0 0 5%;
 }
+
+/*---------CODEPEN CARDS MODAL---------*/
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+.close-btn {
+    float: right;
+    color: lightgray;
+    font-size: 24px;
+    font-weight: bold;
+}
+.close-btn:hover {
+    color: darkgray;
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+.card-modal-img img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+/*---------------------------------------------------------*/
+/*-----------------------CONTACT PAGE--------------------*/
+/*---------------------------------------------------------*/
+
+#email-contact{
+    width: 90%;
+    margin: 15%;
+
+    color: var(--maroon-color);
+    font-size: calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-family: 'DM Serif Text', serif;
+}
+
+#social-btns{
+    column-count: 4;
+    column-gap: 1em;
+
+    width: 90%;
+    margin: 10%;
+}
+#social-btns ul{
+    text-decoration: none;
+    list-style: none;
+}
+#social-btns svg{
+    width: auto;
+    height: 50px;
+    fill: var(--maroon-color);
+}
+
 
 /*---------------------------------------------------------*/
 /*------when the browser window is 600px wide or less------*/
@@ -330,13 +393,13 @@ a.skill-card-link:hover::after {
         column-count: 1;
         column-gap: 1em;
         width: 90%;
-        margin: 5% 0 10% 10%;
+        margin: 5% 0 10% 5%;
     }
 
     #codepen-cards {
         column-count: 1;
         column-gap: 1em;
         width: 90%;
-        margin: 5% 0 10% 10%;
+        margin: 5% 0 10% 5%;
     }
 }
