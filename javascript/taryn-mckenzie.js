@@ -9,6 +9,7 @@ function projectCards(project) { //put the projects on the page!
                 '<div class="card-modal-img">' + project.img + '</div>' +
                 '<div class="card-modal-title" >' + project.title + '</div>' +
                 '<div class="card-modal-desc" >' + project.desc + '</div>' +
+                '<div class="card-modal-exit" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg></div>' +
             '</div>'; // Project Modal to show on click
     html += '</div>'; // end table row
 
@@ -29,11 +30,7 @@ const projects = [ // An array of projects
         id: 1,
         title: 'Coffee Project',
         img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image"  alt="">',
-        desc: 'This is the project description.',
-        categories: [
-
-        ]
-    },
+        desc: 'This is the project description.'},
     {
         id: 2,
         title: 'Movies Application',
@@ -110,4 +107,7 @@ codepenProjectsSection.innerHTML = renderProjectCards(codepenProjects); // place
 
 document.getElementById('card-img').onclick=function(){
     document.getElementById('modal-hidden').style.display='block';
+};
+document.getElementById('exit-btn').onclick=function(){
+    document.getElementById('modal-hidden').style.display='none';
 };

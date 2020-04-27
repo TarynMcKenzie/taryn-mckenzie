@@ -9,11 +9,17 @@
     /*font-family: 'DM Serif Text', serif;*/
 }
 
-body{
+body {
     background: var(--yellowTan-color);
 }
+hr{
+    color: var(--maroon-color);
+    background-color: var(--maroon-color);
+    height: 1px;
+    width: 100%;
+}
 
-.main-article{
+.main-article {
     width: 80%;
     margin: 10% 10%;
     font-family: 'Lato', sans-serif;
@@ -21,7 +27,7 @@ body{
 }
 
 /*--------- NAVBAR(S)---------*/
-.main-nav a, .footer-nav a{
+.main-nav a, .footer-nav a {
     padding: 10px;
 
     text-decoration: none;
@@ -32,47 +38,51 @@ body{
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
 }
-.main-nav, .footer-nav{
-    display:-webkit-flex;
-    display:flex;
-    justify-content:flex-end;
+
+.main-nav, .footer-nav {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
 
     width: 90%;
     margin: 5% 5%;
     padding: 0;
 }
+
 .left {
-    margin-right:auto;
+    margin-right: auto;
 }
 
-nav.footer-nav{
+nav.footer-nav {
     width: 90%;
     margin: 5% 5%;
 
     display: flex;
     justify-content: space-between;
 }
-nav.footer-nav ul{
+
+nav.footer-nav ul {
     list-style: none;
     padding: 0;
 }
-nav.footer-nav ul li{
+
+nav.footer-nav ul li {
     display: inline-block;
 }
 
 
 /*---------INTRO SECTION---------*/
-#real-fancy-header{
-    width: 85%;
+#real-fancy-header {
+    width: 70%;
     margin: 0 0;
 
     font-size: calc(50px + (100 - 50) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     color: var(--maroon-color);
-    text-rendering: optimizeLegibility;
     font-family: 'DM Serif Text', serif;
 }
+
 #this-paragraph {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -85,15 +95,112 @@ nav.footer-nav ul li{
 
     color: var(--maroon-color);
     letter-spacing: .10px;
-    text-rendering: optimizeLegibility;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
 }
 
-/*---------SECTION(S) HEADERS---------*/
 
-#job-experience-header, #education-header{
+/*---------SKILL SECTION---------*/
+a {
+    font-weight: 400;
+    color: var(--maroon-color);
+    padding-bottom: 5px;
+    background: url("https://ewebdesign.com/wp-content/themes/ewebdesign/assets/img/wave.svg");
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    background-repeat: repeat-x;
+    background-size: 15px 5px;
+    background-position: 2px 19px;
+    animation: move 15s linear infinite;
+    -webkit-animation: move 15s linear infinite;
+    animation-play-state: paused;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    animation-play-state: running;
+}
+
+
+@-webkit-keyframes move {
+    from {
+        background-position: 2px 19px;
+    }
+    to {
+        background-position: 500px 19px;
+    }
+}
+
+@keyframe move {
+    from {
+        background-position: 2px 19px;
+    }
+    to {
+        background-position: 500px 19px;
+    }
+}
+
+/*---------SKILL SECTION---------*/
+#skills-section {
+    color: var(--maroon-color);
+    letter-spacing: .10px;
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
+    margin: 10% 0 0 0;
+}
+
+.skill-card-title {
+    width: 85%;
+    margin: 0;
+
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
+    color: var(--maroon-color);
+    font-family: 'DM Serif Text', serif;
+}
+.skill-card-sub-title{
+    width: 85%;
+    margin: 0;
+
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
+    color: var(--maroon-color);
+    font-family: 'DM Serif Text', serif;
+}
+
+.skill-card-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 0;
+
+    width: 50%;
+    margin: 2% 0 0 20%;
+}
+
+#skills-section ul {
+    list-style: none;
+    padding: 0;
+}
+.graphic-icon{
+    height: 20px;
+    width: auto;
+    fill: var(--maroon-color);
+}
+
+
+/*---------RESUME SECTION HEADERS---------*/
+
+#job-experience-header, #education-header {
     width: 85%;
     margin: 0;
 
@@ -103,7 +210,8 @@ nav.footer-nav ul li{
     color: var(--maroon-color);
     font-family: 'DM Serif Text', serif;
 }
-#military-header{
+
+#military-header {
     width: 85%;
     margin: 0;
 
@@ -114,8 +222,8 @@ nav.footer-nav ul li{
     font-family: 'DM Serif Text', serif;
 }
 
-/*---------SECTION(S)---------*/
-.experiences, .education{
+/*---------RESUME SECTION(S)---------*/
+.experiences, .education {
     width: 55%;
     margin: 5% 0 10% 10%;
 
@@ -130,7 +238,7 @@ nav.footer-nav ul li{
 }
 
 /*---------PROJECT CARDS---------*/
-#projects-section h2{
+#projects-section h2 {
     width: 85%;
     margin: 5% 0 10% 5%;
 
@@ -139,23 +247,24 @@ nav.footer-nav ul li{
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
 }
-#project-cards{
+
+#project-cards {
     column-count: 3;
     column-gap: 1em;
     width: 90%;
     margin: 5% 0 10% 10%;
 }
 
-.card-title{
+.card-title {
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-    text-rendering: optimizeLegibility;
+
     font-weight: bold;
     padding: 10px 0;
     color: var(--maroon-color);
 }
 
-.card-body{
+.card-body {
     display: inline-block;
     margin: 0 0 1em;
     width: 100%;
@@ -167,11 +276,12 @@ nav.footer-nav ul li{
     cursor: pointer;
     overflow: hidden;
 }
-.card-img:hover .img-content-hover {
-     display: block;
- }
 
-.card-img img{
+.card-img:hover .img-content-hover {
+    display: block;
+}
+
+.card-img img {
     width: 100%;
     height: 500px;
     object-fit: cover;
@@ -180,15 +290,17 @@ nav.footer-nav ul li{
 }
 
 .card-img img:hover {
-     transform: scale(1.05);
- }
-.modal-hidden{
+    transform: scale(1.05);
+
+}
+
+.modal-hidden {
     display: none;
 }
 
 
 /*---------CODEPEN CARDS---------*/
-#codepen-section h2{
+#codepen-section h2 {
     width: 85%;
     margin: 5% 0 10% 5%;
 
@@ -196,7 +308,8 @@ nav.footer-nav ul li{
     font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 }
-#codepen-cards{
+
+#codepen-cards {
     column-count: 3;
     column-gap: 1em;
 
@@ -207,9 +320,9 @@ nav.footer-nav ul li{
 /*---------------------------------------------------------*/
 /*------when the browser window is 600px wide or less------*/
 /*---------------------------------------------------------*/
-@media only screen and (max-width: 768px)  {
+@media only screen and (max-width: 768px) {
 
-    #this-paragraph {
+    #this-paragraph, .skill-card-body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
@@ -225,13 +338,14 @@ nav.footer-nav ul li{
         margin: 5% 0 10% 10%;
     }
 
-    #project-cards{
+    #project-cards {
         column-count: 1;
         column-gap: 1em;
         width: 90%;
         margin: 5% 0 10% 10%;
     }
-    #codepen-cards{
+
+    #codepen-cards {
         column-count: 1;
         column-gap: 1em;
         width: 90%;
