@@ -9,13 +9,20 @@
     /*font-family: 'DM Serif Text', serif;*/
 }
 
+/*---------------------------------------------------------*/
+/*----------------------INDEX (HOME) PAGE------------------*/
+/*---------------------------------------------------------*/
 body {
     background: var(--yellowTan-color);
+    text-rendering: optimizeLegibility;
 }
-hr{
+
+hr {
     color: var(--maroon-color);
     background-color: var(--maroon-color);
-    height: 1px;
+    border: none;
+
+    height: 3px;
     width: 100%;
 }
 
@@ -23,7 +30,6 @@ hr{
     width: 80%;
     margin: 10% 10%;
     font-family: 'Lato', sans-serif;
-    text-rendering: optimizeLegibility;
 }
 
 /*--------- NAVBAR(S)---------*/
@@ -33,7 +39,6 @@ hr{
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     color: var(--maroon-color);
-    text-rendering: optimizeLegibility;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
@@ -88,67 +93,52 @@ nav.footer-nav ul li {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0;
 
-    width: 75%;
-    margin: 5% 0 10% 28%;
+    width: 70%;
+    margin: 5% 10% 10% 28%;
 
     color: var(--maroon-color);
-    letter-spacing: .10px;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
 }
 
 
-/*---------SKILL SECTION---------*/
+/*---------SKILL LINKS---------*/
 a {
-    font-weight: 400;
-    color: var(--maroon-color);
-    padding-bottom: 5px;
-    background: url("https://ewebdesign.com/wp-content/themes/ewebdesign/assets/img/wave.svg");
-    background-repeat: repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-size: auto auto;
-    background-repeat: repeat-x;
-    background-size: 15px 5px;
-    background-position: 2px 19px;
-    animation: move 15s linear infinite;
-    -webkit-animation: move 15s linear infinite;
-    animation-play-state: paused;
     text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
 }
 
-a:hover {
-    animation-play-state: running;
+a.skill-card-link::after {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: -2px;
+
+    padding: 0 2px;
+    width: calc(100% + 2px);
+    height: 1px;
+    border-bottom: 1px solid var(--maroon-color);
+
+    transition: 0.4s;
 }
 
-
-@-webkit-keyframes move {
-    from {
-        background-position: 2px 19px;
-    }
-    to {
-        background-position: 500px 19px;
-    }
+a.skill-card-link:hover::after {
+    top: 0;
+    height: 1.5em;
+    background-color: rgba(214, 187, 166, 0.5);
+    border-color: transparent;
 }
 
-@keyframe move {
-    from {
-        background-position: 2px 19px;
-    }
-    to {
-        background-position: 500px 19px;
-    }
-}
 
 /*---------SKILL SECTION---------*/
 #skills-section {
     color: var(--maroon-color);
-    letter-spacing: .10px;
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
@@ -160,16 +150,6 @@ a:hover {
     margin: 0;
 
     font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-
-    color: var(--maroon-color);
-    font-family: 'DM Serif Text', serif;
-}
-.skill-card-sub-title{
-    width: 85%;
-    margin: 0;
-
-    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
     color: var(--maroon-color);
@@ -191,12 +171,16 @@ a:hover {
     list-style: none;
     padding: 0;
 }
-.graphic-icon{
+
+.graphic-icon {
     height: 20px;
     width: auto;
     fill: var(--maroon-color);
 }
 
+/*---------------------------------------------------------*/
+/*------------------------RESUME PAGE----------------------*/
+/*---------------------------------------------------------*/
 
 /*---------RESUME SECTION HEADERS---------*/
 
@@ -237,10 +221,14 @@ a:hover {
 
 }
 
+/*---------------------------------------------------------*/
+/*-----------------------PORTFOLIO PAGE--------------------*/
+/*---------------------------------------------------------*/
+
 /*---------PROJECT CARDS---------*/
 #projects-section h2 {
     width: 85%;
-    margin: 5% 0 10% 5%;
+    margin: 5% 0 0 5%;
 
     color: var(--maroon-color);
     font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -252,7 +240,7 @@ a:hover {
     column-count: 3;
     column-gap: 1em;
     width: 90%;
-    margin: 5% 0 10% 10%;
+    margin: 0 0 0 10%;
 }
 
 .card-title {
