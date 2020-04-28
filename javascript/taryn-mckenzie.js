@@ -6,13 +6,13 @@ function projectCards(project) { //put the projects on the page!
     let html = '<div class="card-body" id="project-body">'; // create the card body
     html += '<div class="card-img">' + project.img + '</div>'; // get the project image
     html += '<div class="modal">' +
-                '<div class="modal-content">' +
-                    '<div class="card-modal-img">' + project.img + '</div>' +
-                    '<div class="card-modal-title" >' + project.title + '</div>' +
-                    '<div class="card-modal-desc" >' + project.desc + '</div>' +
-                    '<div class="close-btn" ><span class="close-btn">&times;</span></div>' +
-                '</div>' +
-            '</div>'; // Project Modal to show on click of image
+        '<div class="modal-content">' +
+        '<div class="card-modal-img">' + project.img + '</div>' +
+        '<div class="close-btn" ><span class="close-btn">&times;</span></div>' +
+        '<div class="card-modal-title" >' + project.title + '</div>' +
+        '<div class="card-modal-desc" >' + project.desc + '</div>' +
+        '</div>' +
+        '</div>'; // Project Modal to show on click of image
     html += '</div>'; // end table row
 
     return html; //return the div
@@ -108,20 +108,22 @@ portfolioProjectsSection.innerHTML = renderProjectCards(projects); // place card
 const codepenProjectsSection = document.querySelector('#codepen-cards'); // get the id for the card div
 codepenProjectsSection.innerHTML = renderProjectCards(codepenProjects); // place cards into queried div
 
-let modalBtn = document.querySelector(".card-img")
-let modal = document.querySelector(".modal")
-let closeBtn = document.querySelector(".close-btn")
+
+//-----------MODAL FUNCTIONS----------------
+let modalBtn = document.querySelector(".card-img") //get the card image
+let modal = document.querySelector(".modal") // get the modal
+let closeBtn = document.querySelector(".close-btn") // get the close icon
 
 // Display modal on click
 modalBtn.onclick = function () {
-    modal.style.display = "block"
+    modal.style.display = "block" // when an image is clicked --> change the display style to block
 }
 // Hide modal on click
 closeBtn.onclick = function () {
-    modal.style.display = "none"
+    modal.style.display = "none" // When the modal is clicked --> change the display style to none
 }
 window.onclick = function (e) {
-    if (e.target === modal) {
-        modal.style.display = "none"
+    if (e.target === modal) {   // check if the click action is within the modal
+        modal.style.display = "none"// When the modal is clicked --> change the display style to none
     }
 }
