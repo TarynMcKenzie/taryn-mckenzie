@@ -34,3 +34,8 @@
  src/main/resources/application.properties
 
  codemr/
+
+### Node ###
+node_modules/
+main.js
+*.map
