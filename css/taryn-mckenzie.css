@@ -250,11 +250,13 @@ a.skill-card-link:hover::after {
 }
 
 #project-cards {
-    column-count: 4;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     column-gap: 1em;
+    row-gap: 1em;
 
     width: 90%;
-    margin: 0 15% 0 5%;
+    margin: 5% 15% 15% 5%;
 }
 
 .card-img {
@@ -264,8 +266,8 @@ a.skill-card-link:hover::after {
     overflow: hidden;
 }
 
-.card-img:hover .img-content-hover {
-    display: block;
+.modal{
+    display: none;
 }
 
 .card-img img {
@@ -279,25 +281,6 @@ a.skill-card-link:hover::after {
 .card-img img:hover {
     transform: scale(1.05);
 
-}
-
-/*---------CODEPEN CARDS---------*/
-#codepen-section h2 {
-    width: 90%;
-    margin: 15% 0 5% 5%;
-
-    color: var(--maroon-color);
-    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-    font-family: 'DM Serif Text', serif;
-}
-
-#codepen-cards {
-    column-count: 4;
-    column-gap: 1em;
-
-    width: 90%;
-    margin: 0 0 0 5%;
 }
 
 /*---------CARDS MODAL---------*/
