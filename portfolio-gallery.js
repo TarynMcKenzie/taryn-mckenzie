@@ -12,7 +12,7 @@ $(document).ready(function () { //Run jQuery after document loads
 
         $.each(projects, function (index, currentProject) { // Select the projects input --> Iterate through each project
 
-            let html = '<div class="card-body" id="project-body">'; // create the card body
+            let html = '<div class="card-body slideanim" id="project-body">'; // create the card body
             html += '<div class="card-img">' + currentProject.img + '</div>'; // get the project image
 
             html += '<div class="modal">' +
