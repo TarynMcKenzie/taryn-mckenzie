@@ -12,19 +12,23 @@ $(document).ready(function () { //Run jQuery after document loads
 
         $.each(projects, function (index, currentProject) { // Select the projects input --> Iterate through each project
 
-            let html = '<div class="card-body slideanim" id="project-body">'; // create the card body
-            html += '<div class="card-img">' + currentProject.img + '</div>'; // get the project image
+            let html = '<div class="container card-body">'
+                    html += '<div class="card-img">' + currentProject.img + '</div>'
+                    html += '<div class="card-overlay">'
+                        html += '<div class="card-title">'+ currentProject.title+ '</div>'
+                    html += '</div>'
+                html += '</div>'
 
-            html += '<div class="modal">' +
-                '<div class="modal-content">' +
-                '<div class="card-modal-img">' + currentProject.img + '</div>' +
-                '<div class="close-btn" ><span class="close-btn">&times;</span></div>' +
-                '<div class="card-modal-title" >' + currentProject.title + '</div>' +
-                '<div class="card-modal-desc" >' + currentProject.desc + '</div>' +
-                '</div>' +
-                '</div>' +
+            // html += '<div class="modal">' +
+            //     '<div class="modal-content">' +
+            //     '<div class="card-modal-img">' + currentProject.img + '</div>' +
+            //     '<div class="close-btn" ><span class="close-btn">&times;</span></div>' +
+            //     '<div class="card-modal-title" >' + currentProject.title + '</div>' +
+            //     '<div class="card-modal-desc" >' + currentProject.desc + '</div>' +
+            //     '</div>' +
+            //     '</div>' +
 
-                '</div>';
+                html+= '</div>';
 
             $('#project-cards').append(html);
         })
@@ -83,19 +87,36 @@ $(document).ready(function () { //Run jQuery after document loads
     // TODO: Call the function to put the project objects onto the page
     projectCards(projects);
 
+    // const element = document.querySelector(`.card-body`)
+    //
+    // element.on("mouseenter", "div", function() {
+    //     // hover starts code here
+    //     console.log("mouse entered")
+    //     // $(".overlay").css('opacity', '0');
+    // });
+    //
+    // element.on("mouseleave", "div", function() {
+    //     // hover ends code here
+    //     console.log("mouse left")
+    //     // $(".overlay").css('opacity', '1');
+    // });
+
+
+
+
 //-----------------------------------------
 //-----------MODAL FUNCTIONS---------------
 //-----------------------------------------
 
 // Display modal on click
-    $('.image').click(function () { // when an image is clicked
+    $('.image').on("click", "img", function() {// when an image is clicked
 
         $('.modal').css('display', 'block'); // SHOW the modal view
 
     });
 
 // Hide modal on click
-    $('.close-btn').click(function () { // when an image is clicked
+    $('.close-btn').on("click", "div", function() { // when an image is clicked
 
         $('.modal').css('display', 'none'); // SHOW the modal view
 

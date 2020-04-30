@@ -1,0 +1,229 @@
+:root {
+    --darkGrey-color: #26242B;
+    --maroon-color: #482325;
+    --redTan-color: #D6BBA6;
+    --yellowTan-color: #E1DAC8;
+    --lighGrey-color: #EEEEEE;
+
+    /*font-family: 'Lato', sans-serif;*/
+    /*font-family: 'DM Serif Text', serif;*/
+}
+
+
+body {
+    background: var(--yellowTan-color);
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+/*--------- NAVBAR(S)---------*/
+.main-nav a, .footer-nav a {
+    padding: 10px;
+
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: var(--maroon-color);
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+
+}
+
+.main-nav, .footer-nav {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    width: 90%;
+    margin: 5% 5%;
+    padding: 0;
+
+    z-index: 1;
+    position: absolute;
+}
+
+.left {
+    margin-right: auto;
+}
+
+nav.footer-nav {
+    width: 90%;
+    margin: 5% 5%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav.footer-nav ul li {
+    display: inline-block;
+}
+
+
+/*---------------------------------------------------------*/
+/*-----------------------PORTFOLIO PAGE--------------------*/
+/*---------------------------------------------------------*/
+
+/*---------PROJECT CARDS---------*/
+
+#project-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    /*position: relative;*/
+}
+
+.card-body {
+    transition: all 1s ease-in-out;
+}
+
+
+/*This is the (parent) imag div container*/
+.card-img {
+    display: block;
+
+    width: 100%;
+    height: 100vh;
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/*This is the image (child) inside of the parent div container*/
+.card-img img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: var(--yellowTan-color);
+}
+
+.container:hover .card-overlay {
+    opacity: 0;
+}
+
+.card-title {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*!*---------CARDS MODAL---------*!*/
+/*.modal {*/
+/*    display: none;*/
+/*    position: fixed;*/
+/*    padding-top: 50px;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+
+/*    background-color: rgb(0, 0, 0);*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    z-index: 2;*/
+/*}*/
+
+/*.modal-content {*/
+/*    position: relative;*/
+/*    background-color: white;*/
+/*    padding: 20px;*/
+/*    margin: auto;*/
+/*    width: 75%;*/
+
+/*    -webkit-animation-name: animatetop;*/
+/*    -webkit-animation-duration: 0.4s;*/
+/*    animation-name: animatetop;*/
+/*    animation-duration: 0.4s*/
+/*}*/
+
+/*.close-btn {*/
+/*    float: right;*/
+/*    color: var(--maroon-color);*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.close-btn:hover {*/
+/*    color: var(--redTan-color);*/
+/*}*/
+
+/*@-webkit-keyframes animatetop {*/
+/*    from {*/
+/*        top: -300px;*/
+/*        opacity: 0*/
+/*    }*/
+/*    to {*/
+/*        top: 0;*/
+/*        opacity: 1*/
+/*    }*/
+/*}*/
+
+/*@keyframes animatetop {*/
+/*    from {*/
+/*        top: -300px;*/
+/*        opacity: 0*/
+/*    }*/
+/*    to {*/
+/*        top: 0;*/
+/*        opacity: 1*/
+/*    }*/
+/*}*/
+
+/*.card-modal-title {*/
+/*    width: 90%;*/
+/*    margin: 15% 0 5% 5%;*/
+
+/*    color: var(--maroon-color);*/
+/*    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));*/
+/*    !*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*!*/
+/*    font-family: 'DM Serif Text', serif;*/
+/*}*/
+
+/*.card-modal-img img {*/
+/*    width: 100%;*/
+/*    height: 500px;*/
+/*    object-fit: cover;*/
+
+/*}*/
+
+/*---------------------------------------------------------*/
+/*------when the browser window is 600px wide or less------*/
+/*---------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+    #project-cards {
+        column-count: 1;
+        column-gap: 1em;
+        width: 90%;
+        margin: 5% 0 10% 5%;
+    }
+}

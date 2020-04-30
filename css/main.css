@@ -88,6 +88,7 @@ nav.footer-nav ul li {
     font-family: 'DM Serif Text', serif;
     line-height: calc(50px + (111 - 50) * ((100vw - 300px) / (1600 - 300)));
 }
+
 .secondary-real-fancy-header {
     width: 90%;
     margin: 0 0;
@@ -176,7 +177,8 @@ a.skill-card-link:hover::after {
     width: 70%;
     margin: 0 0 0 20%;
 }
-#skill-card-a, #skill-card-b{
+
+#skill-card-a, #skill-card-b {
     margin: 5% 0 5% 0;
 }
 
@@ -234,133 +236,6 @@ a.skill-card-link:hover::after {
 
 }
 
-/*---------------------------------------------------------*/
-/*-----------------------PORTFOLIO PAGE--------------------*/
-/*---------------------------------------------------------*/
-
-/*---------PROJECT CARDS---------*/
-#projects-section h2 {
-    width: 90%;
-    margin: 0 0 5% 5%;
-
-    color: var(--maroon-color);
-    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-    font-family: 'DM Serif Text', serif;
-}
-
-#project-cards {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 2em;
-    row-gap: 2em;
-
-    width: 90%;
-    margin: 5% 15% 15% 5%;
-}
-
-.card-img {
-    width: 100%;
-    height: 20%;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.modal{
-    display: none;
-}
-
-.card-img img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    transform: scale(1);
-    transition: all 0.3s ease-in-out;
-}
-
-.card-img img:hover {
-    transform: scale(1.05);
-
-}
-
-/*---------CARDS MODAL---------*/
-.modal {
-    display: none;
-    position: fixed;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-}
-
-.modal-content {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    margin: auto;
-    width: 75%;
-
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-.close-btn {
-    float: right;
-    color: var(--maroon-color);
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: var(--redTan-color);
-}
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-.card-modal-title {
-    width: 90%;
-    margin: 15% 0 5% 5%;
-
-    color: var(--maroon-color);
-    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-    /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-    font-family: 'DM Serif Text', serif;
-}
-
-.card-modal-img img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-
-}
 
 /*---------------------------------------------------------*/
 /*-----------------------CONTACT PAGE--------------------*/
@@ -393,28 +268,6 @@ a.skill-card-link:hover::after {
     fill: var(--maroon-color);
 }
 
-/*---------SMOOTH SLIDE IN---------*/
-
-.slideanim {
-    visibility:hidden;
-    visibility:visible\9;/*For old IE browsers IE6-8 */
-    transition: 0.8s;
-}
-.slideanim.slide {
-    visibility: visible;
-    animation: slide 1s;
-}
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /*---------------------------------------------------------*/
 /*------when the browser window is 600px wide or less------*/
 /*---------------------------------------------------------*/
@@ -437,13 +290,6 @@ a.skill-card-link:hover::after {
     }
 
     #project-cards {
-        column-count: 1;
-        column-gap: 1em;
-        width: 90%;
-        margin: 5% 0 10% 5%;
-    }
-
-    #codepen-cards {
         column-count: 1;
         column-gap: 1em;
         width: 90%;
