@@ -13,10 +13,11 @@ $(document).ready(function () { //Run jQuery after document loads
         $.each(projects, function (index, currentProject) { // Select the projects input --> Iterate through each project
 
             let html = '<div class="container card-body">'
-                    html += '<div class="card-img">' + currentProject.img + '</div>'
                     html += '<div class="card-title">'+ currentProject.title+ '</div>'
+                    html += '<div class="card-img"><div class="overlay-effect"></div>' + currentProject.img + '</div>'
+                    html += '<p class="card-date"><em>'+ currentProject.date+ '</em></p>'
                     html += '<div class="card-overlay">'
-                         html += '<div class="card-title">'+ currentProject.title+ '</div>'
+                         html += '<h4 class="card-title">'+ currentProject.title+ '</h4>'
                     html += '</div>'
                 html += '</div>'
                 html+= '</div>';
@@ -35,42 +36,49 @@ $(document).ready(function () { //Run jQuery after document loads
             id: 1,
             title: 'Coffee Project',
             img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image"  alt="">',
+            date: 'February 2020',
             desc: 'This is the project description.'
         },
         {
             id: 2,
             title: 'Movies Application',
             img: '<img src="img/brooke-lark-W1B2LpQOBxA-unsplash.jpg" class="image" alt="">',
+            date: 'March 2020',
             desc: 'This is the project description.'
         },
         {
             id: 3,
             title: 'AdLister',
             img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
+            date: 'May 2020',
             desc: 'This is the project description.'
         },
         {
             id: 4,
             title: 'Capstone',
             img: '<img src="img/tyler-lastovich-e31ANd1PXUw-unsplash.jpg" class="image" alt="">',
+            date: 'May 2020',
             desc: 'This is the project description.'
         },
         {
             id: 5,
             title: 'Tamagotchi RPG',
             img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
+            date: 'April 2020',
             desc: 'This is the project description.'
         },
         {
             id: 6,
             title: 'Fortune Teller',
             img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
+            date: 'February 2020',
             desc: 'This is the project description.'
         },
         {
             id: 7,
             title: 'Weather Map API',
             img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image" alt="">',
+            date: 'March 2020',
             desc: 'This is the project description.'
         },
     ];
@@ -78,39 +86,23 @@ $(document).ready(function () { //Run jQuery after document loads
     // TODO: Call the function to put the project objects onto the page
     projectCards(projects);
 
-    // const element = document.querySelector(`.card-body`)
-    //
-    // element.on("mouseenter", "div", function() {
-    //     // hover starts code here
-    //     console.log("mouse entered")
-    //     // $(".overlay").css('opacity', '0');
-    // });
-    //
-    // element.on("mouseleave", "div", function() {
-    //     // hover ends code here
-    //     console.log("mouse left")
-    //     // $(".overlay").css('opacity', '1');
-    // });
-
-
-
 
 //-----------------------------------------
-//-----------MODAL FUNCTIONS---------------
+//-------DESCRIPTION VIEW FUNCTIONS--------
 //-----------------------------------------
-
-// Display modal on click
-    $('.image').on("click", "img", function() {// when an image is clicked
-
-        $('.modal').css('display', 'block'); // SHOW the modal view
-
-    });
-
-// Hide modal on click
-    $('.close-btn').on("click", "div", function() { // when an image is clicked
-
-        $('.modal').css('display', 'none'); // SHOW the modal view
-
-    });
+//
+// // Display modal on click
+//     $('.image').on("click", "img", function() {// when an image is clicked
+//
+//         $('.modal').css('display', 'block'); // SHOW the modal view
+//
+//     });
+//
+// // Hide modal on click
+//     $('.close-btn').on("click", "div", function() { // when an image is clicked
+//
+//         $('.modal').css('display', 'none'); // SHOW the modal view
+//
+//     });
 
 });// ready()
