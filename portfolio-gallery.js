@@ -14,8 +14,8 @@ $(document).ready(function () { //Run jQuery after document loads
 
             let html = '<div class="container card-body">'
                     html += '<div class="card-title">'+ currentProject.title+ '</div>'
-                    html += '<div class="card-img"><div class="overlay-effect"></div>' + currentProject.img + '</div>'
                     html += '<p class="card-date"><em>'+ currentProject.date+ '</em></p>'
+                    html += '<div class="card-img"><div class="overlay-effect"></div>' + currentProject.img + '</div>'
                     html += '<div class="card-overlay">'
                          html += '<h4 class="card-title">'+ currentProject.title+ '</h4>'
                     html += '</div>'
@@ -35,14 +35,14 @@ $(document).ready(function () { //Run jQuery after document loads
         {
             id: 1,
             title: 'Coffee Project',
-            img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image"  alt="">',
+            img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image"  alt="">',
             date: 'February 2020',
             desc: 'This is the project description.'
         },
         {
             id: 2,
             title: 'Movies Application',
-            img: '<img src="img/brooke-lark-W1B2LpQOBxA-unsplash.jpg" class="image" alt="">',
+            img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
             date: 'March 2020',
             desc: 'This is the project description.'
         },
@@ -56,7 +56,7 @@ $(document).ready(function () { //Run jQuery after document loads
         {
             id: 4,
             title: 'Capstone',
-            img: '<img src="img/tyler-lastovich-e31ANd1PXUw-unsplash.jpg" class="image" alt="">',
+            img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
             date: 'May 2020',
             desc: 'This is the project description.'
         },
@@ -77,7 +77,7 @@ $(document).ready(function () { //Run jQuery after document loads
         {
             id: 7,
             title: 'Weather Map API',
-            img: '<img src="img/ben-kolde-Ajcipx1VDXI-unsplash.jpg" class="image" alt="">',
+            img: '<img src="img/giorgio-trovato-v_bri4iVuiM-unsplash.jpg" class="image" alt="">',
             date: 'March 2020',
             desc: 'This is the project description.'
         },

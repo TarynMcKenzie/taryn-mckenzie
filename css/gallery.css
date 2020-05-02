@@ -7,6 +7,8 @@
 
     /*font-family: 'Lato', sans-serif;*/
     /*font-family: 'DM Serif Text', serif;*/
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /*--------- NAVBAR(S)---------*/
 .main-nav a, .footer-nav a {
     padding: 10px;
@@ -24,7 +27,6 @@ body {
     color: var(--maroon-color);
     font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
-
 }
 
 .main-nav, .footer-nav {
@@ -73,10 +75,14 @@ nav.footer-nav ul li {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
+
+    border-left: var(--redTan-color) solid 1px;
 }
 
 .card-body {
     transition: all 1s ease-in-out;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -102,16 +108,9 @@ nav.footer-nav ul li {
     height: 100vh;
     object-fit: cover;
 
-
     opacity: 1;
     background-color: rgba(225, 218, 200, 0.3);
     overflow: hidden;
-    z-index: 1;
-}
-
-.container {
-    position: relative;
-    width: 100%;
 }
 
 
@@ -126,6 +125,7 @@ nav.footer-nav ul li {
     opacity: 1;
     transition: .5s ease;
     background-color: var(--yellowTan-color);
+    border-left: var(--redTan-color) solid 1px;
 }
 
 .container:hover .card-overlay {
@@ -141,19 +141,19 @@ nav.footer-nav ul li {
     font-family: 'DM Serif Text', serif;
 
     position: absolute;
-    top: 90vh;
-    padding: 0 5% 0 5%;
+    top: 85vh;
+    padding: 0 20% 0 5%;
 }
 
-.card-date{
+.card-date {
     color: var(--maroon-color);
     font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     font-family: 'Lato', sans-serif;
 
     position: absolute;
-    top: 92vh;
-    padding: 0 5% 0 5%;
+    top: 87vh;
+    padding: 0 20% 0 5%;
 }
 
 
@@ -165,7 +165,20 @@ nav.footer-nav ul li {
     #project-cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        width: 100%;
+    }
+
+    .overlay-effect, .card-overlay .card-img, .card-img img {
+        height: 50vh;
+    }
+
+    .card-title {
+        top: 60vh;
+        padding: 0 10% 0 10%;
+    }
+
+    .card-date {
+        top: 62vh;
+        padding: 0 10% 0 10%;
     }
 
     .card-overlay {
