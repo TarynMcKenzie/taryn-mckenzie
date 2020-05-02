@@ -14,20 +14,11 @@ $(document).ready(function () { //Run jQuery after document loads
 
             let html = '<div class="container card-body">'
                     html += '<div class="card-img">' + currentProject.img + '</div>'
+                    html += '<div class="card-title">'+ currentProject.title+ '</div>'
                     html += '<div class="card-overlay">'
-                        html += '<div class="card-title">'+ currentProject.title+ '</div>'
+                         html += '<div class="card-title">'+ currentProject.title+ '</div>'
                     html += '</div>'
                 html += '</div>'
-
-            // html += '<div class="modal">' +
-            //     '<div class="modal-content">' +
-            //     '<div class="card-modal-img">' + currentProject.img + '</div>' +
-            //     '<div class="close-btn" ><span class="close-btn">&times;</span></div>' +
-            //     '<div class="card-modal-title" >' + currentProject.title + '</div>' +
-            //     '<div class="card-modal-desc" >' + currentProject.desc + '</div>' +
-            //     '</div>' +
-            //     '</div>' +
-
                 html+= '</div>';
 
             $('#project-cards').append(html);

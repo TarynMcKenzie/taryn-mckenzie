@@ -17,15 +17,6 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-hr {
-    color: var(--maroon-color);
-    background-color: var(--maroon-color);
-    border: none;
-
-    height: 3px;
-    width: 100%;
-}
-
 .main-article {
     width: 80%;
     margin: 10% 10%;
@@ -115,6 +106,34 @@ nav.footer-nav ul li {
 
 }
 
+/*---------IMAGE SECTION---------*/
+.section-img{
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    /*transition: .5s ease;*/
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.overlay-effect {
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    opacity: 1;
+    background-color: rgba(225, 218, 200, 0.7);
+    overflow: hidden;
+    z-index: 1;
+}
 
 /*---------SKILL LINKS---------*/
 a {
@@ -154,6 +173,23 @@ a.skill-card-link:hover::after {
     /*font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
 
     margin: 10% 0 10% 0;
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    /*grid-column-gap: 10px;*/
+    grid-row-gap: 0;
+}
+
+hr {
+    background-color: var(--maroon-color);
+    border: none;
+
+    height: 3px;
+    width: 50%;
+
+    margin: 0 0 10% 0;
 }
 
 .skill-card-title {
@@ -168,18 +204,16 @@ a.skill-card-link:hover::after {
 }
 
 .skill-card-body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 60px;
-    grid-row-gap: 0;
-
-    width: 70%;
-    margin: 0 0 0 20%;
+    width: 80%;
+    margin: 0 0 0 0;
 }
 
 #skill-card-a, #skill-card-b {
     margin: 5% 0 5% 0;
+}
+
+#skill-card-b{
+    margin-top: 15%;
 }
 
 #skills-section ul {
@@ -187,11 +221,6 @@ a.skill-card-link:hover::after {
     padding: 0;
 }
 
-.graphic-icon {
-    height: 20px;
-    width: auto;
-    fill: var(--maroon-color);
-}
 
 /*---------------------------------------------------------*/
 /*------------------------RESUME PAGE----------------------*/
@@ -273,7 +302,7 @@ a.skill-card-link:hover::after {
 /*---------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
 
-    #this-paragraph, .skill-card-body {
+    #this-paragraph {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
@@ -289,10 +318,15 @@ a.skill-card-link:hover::after {
         margin: 5% 0 10% 10%;
     }
 
-    #project-cards {
-        column-count: 1;
-        column-gap: 1em;
-        width: 90%;
-        margin: 5% 0 10% 5%;
+    #skills-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        /*grid-template-rows: 2fr;*/
+        /*grid-column-gap: 10px;*/
+        grid-row-gap: 0;
     }
+    .skill-card-body, .skill-card-skills{
+        margin: 0 0 0 0;
+    }
+
 }
