@@ -92,10 +92,19 @@ $(document).ready(function () { //Run jQuery after document loads
 //-----------------------------------------
 
 // Display modal on click
-    $('.card-overlay').on("click", "div", function() {// when an image is clicked
+    let clicks = 0;
+    $('.card-body').on("click", "div", function(e) {// when an image is clicked
 
-        $(this).animate({width: "300px"}); // SHOW the modal view
+        if (clicks % 2 === 0) {
+            console.log(e) // SHOW the modal view
+            $(e.delegateTarget).css({'width': '50%'});
+            $('.overlay-effect').css('display', 'none');
+        } else {
+            $(e.delegateTarget).css({'width': '25%'});
+            $('.overlay-effect').css('display', 'block');
+        }
 
+        ++clicks;
     });
 
 // Hide modal on click
