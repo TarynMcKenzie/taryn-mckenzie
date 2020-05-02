@@ -132,9 +132,6 @@ nav.footer-nav ul li {
     cursor: pointer;
 }
 
-.container:hover .card-overlay {
-    opacity: 0;
-}
 
 .card-title {
     width: 100%;

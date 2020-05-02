@@ -91,27 +91,32 @@ $(document).ready(function () { //Run jQuery after document loads
 //-------DESCRIPTION VIEW FUNCTIONS--------
 //-----------------------------------------
 
-// Display modal on click
+// Expand element on click
     let clicks = 0;
-    $('.card-body').on("click", "div", function(e) {// when an image is clicked
 
-        if (clicks % 2 === 0) {
-            console.log(e) // SHOW the modal view
-            $(e.delegateTarget).css({'width': '50%'});
-            $('.overlay-effect').css('display', 'none');
-        } else {
-            $(e.delegateTarget).css({'width': '25%'});
-            $('.overlay-effect').css('display', 'block');
+
+    $('.card-body').on({
+        mouseenter: function(e){
+            console.log(e) // What element is being clicked? What can I target.
+            $(e.target).css({'opacity': '0'});//change card-overlay opacity ( HIDE CARD)
+        },
+        mouseleave: function(e){
+            console.log(e) // What element is being clicked? What can I target.
+            $(e.target).css({'opacity': '1'}); //change card-overlay opacity ( SHOW CARD)
+        },
+        click: function(e){
+            if (clicks % 2 === 0) { // if the element is even
+                console.log(e) // What element is being clicked? What can I target.
+                $(e.delegateTarget).css({'width': '50%'}); // What is the parent element? select it --> change width
+                $(e.target).off('mouseenter');// turn off hover
+                $(e.target).off('mouseleave');// turn off hover
+            } else { // if the element is odd
+                $(e.delegateTarget).css({'width': '25%'}); // select parent element of clicked --> revert width back to original setting
+            }
+
+            ++clicks; // increment click count
         }
-
-        ++clicks;
     });
 
-// Hide modal on click
-    $('.close-btn').on("click", "div", function() { // when an image is clicked
-
-        $('.modal').css('display', 'none'); // SHOW the modal view
-
-    });
 
 });// ready()
