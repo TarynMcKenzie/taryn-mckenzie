@@ -98,18 +98,22 @@ $(document).ready(function () { //Run jQuery after document loads
     $('.card-body').on({
         mouseenter: function(e){
             console.log(e) // What element is being clicked? What can I target.
-            $(e.target).css({'opacity': '0'});//change card-overlay opacity ( HIDE CARD)
+            if($('.card-body').attr('status') !== 'clicked') {
+                $(e.target).css({'opacity': '0'});//change card-overlay opacity ( HIDE CARD)
+            }
         },
         mouseleave: function(e){
             console.log(e) // What element is being clicked? What can I target.
-            $(e.target).css({'opacity': '1'}); //change card-overlay opacity ( SHOW CARD)
+            if($('.card-body').attr('status') !== 'clicked') {
+                $(e.target).css({'opacity': '1'}); //change card-overlay opacity ( SHOW CARD)
+            }
         },
         click: function(e){
             if (clicks % 2 === 0) { // if the element is even
                 console.log(e) // What element is being clicked? What can I target.
                 $(e.delegateTarget).css({'width': '50%'}); // What is the parent element? select it --> change width
-                $(e.target).off('mouseenter');// turn off hover
-                $(e.target).off('mouseleave');// turn off hover
+                // $(e.target).off('mouseenter');// turn off hover
+                // $(e.target).off('mouseleave');// turn off hover
             } else { // if the element is odd
                 $(e.delegateTarget).css({'width': '25%'}); // select parent element of clicked --> revert width back to original setting
             }
