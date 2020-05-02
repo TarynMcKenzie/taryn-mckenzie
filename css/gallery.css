@@ -70,11 +70,11 @@ nav.footer-nav ul li {
 /*---------------------------------------------------------*/
 
 /*---------PROJECT CARDS---------*/
-
 #project-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
     border-left: var(--redTan-color) solid 1px;
 }
@@ -82,7 +82,8 @@ nav.footer-nav ul li {
 .card-body {
     transition: all 1s ease-in-out;
     position: relative;
-    width: 100%;
+    flex: 0 0 auto;
+    width: 25%;
 }
 
 
@@ -111,6 +112,8 @@ nav.footer-nav ul li {
     opacity: 1;
     background-color: rgba(225, 218, 200, 0.3);
     overflow: hidden;
+
+    cursor: pointer;
 }
 
 
@@ -126,6 +129,7 @@ nav.footer-nav ul li {
     transition: .5s ease;
     background-color: var(--yellowTan-color);
     border-left: var(--redTan-color) solid 1px;
+    cursor: pointer;
 }
 
 .container:hover .card-overlay {
@@ -142,7 +146,7 @@ nav.footer-nav ul li {
 
     position: absolute;
     top: 85vh;
-    padding: 0 20% 0 5%;
+    padding: 0 0 0 20%;
 }
 
 .card-date {
@@ -153,7 +157,7 @@ nav.footer-nav ul li {
 
     position: absolute;
     top: 87vh;
-    padding: 0 20% 0 5%;
+    padding: 0 0 0 20%;
 }
 
 
@@ -165,15 +169,28 @@ nav.footer-nav ul li {
     #project-cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        overflow-x: hidden;
+
+        border-left: var(--redTan-color) solid 1px;
+    }
+
+    .card-body {
+        transition: all 1s ease-in-out;
+        position: relative;
+        flex: 0 0 0;
+        width: 100%;
     }
 
     .overlay-effect, .card-overlay .card-img, .card-img img {
         height: 50vh;
+        width: 100%;
     }
 
     .card-title {
         top: 60vh;
         padding: 0 10% 0 10%;
+        width: 100%;
     }
 
     .card-date {

@@ -90,19 +90,19 @@ $(document).ready(function () { //Run jQuery after document loads
 //-----------------------------------------
 //-------DESCRIPTION VIEW FUNCTIONS--------
 //-----------------------------------------
-//
-// // Display modal on click
-//     $('.image').on("click", "img", function() {// when an image is clicked
-//
-//         $('.modal').css('display', 'block'); // SHOW the modal view
-//
-//     });
-//
-// // Hide modal on click
-//     $('.close-btn').on("click", "div", function() { // when an image is clicked
-//
-//         $('.modal').css('display', 'none'); // SHOW the modal view
-//
-//     });
+
+// Display modal on click
+    $('.card-overlay').on("click", "div", function() {// when an image is clicked
+
+        $(this).animate({width: "300px"}); // SHOW the modal view
+
+    });
+
+// Hide modal on click
+    $('.close-btn').on("click", "div", function() { // when an image is clicked
+
+        $('.modal').css('display', 'none'); // SHOW the modal view
+
+    });
 
 });// ready()
