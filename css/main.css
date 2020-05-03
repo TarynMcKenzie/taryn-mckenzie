@@ -19,7 +19,7 @@ body {
     padding: 0;
 }
 
-.main-article {
+.main-article, .email-article{
     width: 80%;
     margin: 10% 10%;
     font-family: 'Lato', sans-serif;
@@ -111,7 +111,7 @@ nav.footer-nav ul li {
 /*---------IMAGE SECTION---------*/
 .section-img{
     width: 100vw;
-    height: 40vh;
+    height: 20vh;
     object-fit: cover;
     position: relative;
     left: 50%;
@@ -124,7 +124,7 @@ nav.footer-nav ul li {
 .overlay-effect {
     position: absolute;
     width: 100vw;
-    height: 40vh;
+    height: 20vh;
     object-fit: cover;
     left: 50%;
     right: 50%;
@@ -299,6 +299,16 @@ hr {
     fill: var(--maroon-color);
 }
 
+
+/*---------------------------------------------------------*/
+/*----------------------MOBILE MENU HIDE-------------------*/
+/*---------------------------------------------------------*/
+
+#menuToggle {
+    display: none;
+}
+
+
 /*---------------------------------------------------------*/
 /*------when the browser window is 600px wide or less------*/
 /*---------------------------------------------------------*/
@@ -323,12 +333,25 @@ hr {
     #skills-section {
         display: grid;
         grid-template-columns: 1fr;
-        /*grid-template-rows: 2fr;*/
-        /*grid-column-gap: 10px;*/
         grid-row-gap: 0;
     }
     .skill-card-body, .skill-card-skills{
         margin: 0 0 0 0;
     }
+
+    .main-article, .email-article{
+        margin: 30% 0 5% 10%;
+    }
+    .real-fancy-header{
+        width: 100%;
+    }
+
+    #social-btns {
+        column-count: 1;
+        column-gap: 0;
+
+        width: 100%;
+    }
+
 
 }
