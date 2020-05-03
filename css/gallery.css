@@ -158,6 +158,12 @@ nav.footer-nav ul li {
 }
 
 
+
+#menuToggle {
+ display: none;
+}
+
+
 /*---------------------------------------------------------*/
 /*------when the browser window is 600px wide or less------*/
 /*---------------------------------------------------------*/
@@ -167,15 +173,13 @@ nav.footer-nav ul li {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
-        overflow-x: hidden;
 
         border-left: var(--redTan-color) solid 1px;
     }
 
     .card-body {
         transition: all 1s ease-in-out;
-        position: relative;
-        flex: 0 0 0;
+        flex: none;
         width: 100%;
     }
 
