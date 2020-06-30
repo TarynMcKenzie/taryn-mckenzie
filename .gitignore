@@ -1,44 +1,42 @@
- HELP.md
- target/
- !.mvn/wrapper/maven-wrapper.jar
- !**/src/main/**
- !**/src/main/test/**
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/main/test/**
 
- ### STS ###
- .apt_generated
- .classpath
- .factorypath
- .project
- .settings
- .springBeans
- .sts4-cache
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
- ### IntelliJ IDEA ###
- .idea
- *.iws
- *.iml
- *.ipr
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
- ### NetBeans ###
- /nbproject/private/
- /nbbuild/
- /dist/
- /nbdist/
- /.nb-gradle/
- build/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
 
- ### VS Code ###
- .vscode/
+### VS Code ###
+.vscode/
 
- ### properties file ###
- src/main/resources/application.properties
+### properties file ###
+src/main/resources/application.properties
 
- codemr/
+codemr/
 
 ### Node ###
 node_modules/
 main.js
 *.map
-
-
 package-lock.json
